@@ -1,1 +1,1 @@
-https://ivansimonovikj.github.io/LAZZ/
+https://cafedelaz-858f63.netlify.app/
