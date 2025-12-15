@@ -22,7 +22,7 @@
 ================================ */
 body {
   background-color: #721011;
-  margin: 0;
+  margin-top: 100px;
   padding-top: 20px;
   font-family: "Cascadia Code", monospace;
   color: #fff6dc;
@@ -38,7 +38,7 @@ body {
   align-items: center;
   width: 90%;
   max-width: 400px;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 120px auto;
 }
 
 #logoIMG {
@@ -80,7 +80,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   width: 100%;
 }
 
@@ -106,7 +106,7 @@ body {
 .icon i {
   font-size: 1.5rem;
   color: #fff6dc;
-  min-width: 30px; /* align labels */
+  min-width: 30px;
   text-align: center;
 }
 
@@ -121,7 +121,7 @@ body {
 ================================ */
 @media (max-width: 480px) {
   #container > div {
-    flex-direction: column; /* icon above label */
+    flex-direction: column;
     align-items: center;
     gap: 6px;
   }
