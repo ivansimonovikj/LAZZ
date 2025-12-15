@@ -1,6 +1,9 @@
+/* ================================
+   Fonts
+================================ */
 @font-face {
   font-family: "Cascadia Code";
-  src: url("./fonts/CascadiaCode-Regular.ttf") format("woff2");
+  src: url("./fonts/CascadiaCode-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -8,27 +11,34 @@
 
 @font-face {
   font-family: "Playfair Light";
-  src: url("./fonts/Playfair_9pt-Light.ttf") format("woff2");
+  src: url("./fonts/Playfair_9pt-Light.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
+/* ================================
+   Global Styles
+================================ */
 body {
   background-color: #721011;
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 20px;
+  margin: 0;
+  padding-top: 20px;
+  font-family: "Cascadia Code", monospace;
+  color: #fff6dc;
 }
 
+/* ================================
+   Logo / Figure
+================================ */
 #containerFigure {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  margin-bottom: 50px;
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto 40px auto;
 }
 
 #logoIMG {
@@ -38,45 +48,103 @@ body {
   align-items: center;
 }
 
-img {
-  width: 141.7323px;
-  height: 183.4646px;
+#logoIMG img {
+  width: 120px;
+  max-width: 35vw;
+  height: auto;
 }
 
-#container i {
-  font-size: 22px;
+#logoIMG figcaption {
+  font-family: "Cascadia Code", monospace;
+  font-size: 1.5rem;
   color: #fff6dc;
+  margin-top: 8px;
+  text-align: center;
 }
 
+/* ================================
+   Icon Buttons Container
+================================ */
 #container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%;
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 #container > div {
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: flex-start;
   gap: 10px;
-  margin-bottom: 25px;
-}
-
-.labelIcon {
-  color: #fff6dc;
-  font-size: 12px;
-  font-family: "Playfair Light";
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .icon {
-  padding: 10px 20px;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  width: 100%;
+  max-width: 300px;
   border-radius: 20px;
-  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
   background-color: hsla(45, 100%, 93%, 0.55);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
-.icon:active {
+.icon:hover {
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.6);
   transform: translateY(-2px);
+}
+
+.icon i {
+  font-size: 1.5rem;
+  color: #fff6dc;
+  min-width: 30px; /* align labels */
+  text-align: center;
+}
+
+.labelIcon {
+  font-family: "Playfair Light", serif;
+  font-size: 1rem;
+  color: #fff6dc;
+}
+
+/* ================================
+   Responsive Adjustments
+================================ */
+@media (max-width: 480px) {
+  #container > div {
+    flex-direction: column; /* icon above label */
+    align-items: center;
+    gap: 6px;
+  }
+
+  .icon {
+    padding: 14px 20px;
+    max-width: 90%;
+  }
+
+  .icon i {
+    font-size: 2rem;
+  }
+
+  .labelIcon {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  #logoIMG figcaption {
+    font-size: 1.3rem;
+  }
+
+  #logoIMG img {
+    width: 100px;
+  }
 }
